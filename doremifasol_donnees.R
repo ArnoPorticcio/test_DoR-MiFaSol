@@ -9,11 +9,13 @@ donnees_filo<- doremifasol::telechargerDonnees("FILOSOFI_DISP_COM_ENS", date = 2
 
 
 # Labelisation
-donnees_rp_lgt$CATL_Lab<-factor(donnees_rp_lgt$CATL,
-            labels=c("Resid. principales","Lgt occ", "Resid. sec","Lgts vacants"))
+# db$sexe <- factor(db$sexe, levels = 1:2, labels = c("Homme", "Femme"))
+# db$sexe <- ifelse(db$sexe == 1, "Homme", "Femme")
 
+donnees_rp_lgt$CATL_lbl<-factor(donnees_rp_lgt$CATL, levels = 1:4, 
+                            labels=c("Resid. princ","Lgt occ", "Resid. sec","Lgt vacants"))
 
-donnees_rp_lgt$REGION_Lbl<-factor(donnees_rp_lgt$REGION,
+donnees_rp_lgt$REGION_lbl<-factor(donnees_rp_lgt$REGION,
               labels=c("Guadeloupe",	"Martinique",	"Guyane",	"La Réunion",	"Île-de-France",	"Centre-Val de Loire",	
                        "Bourgogne-Franche-Comté",	"Normandie",	"Hauts-de-France",	"Grand Est",	"Pays de la Loire",	
                        "Bretagne",	"Nouvelle-Aquitaine",	"Occitanie",	"Auvergne-Rhône-Alpes",	
