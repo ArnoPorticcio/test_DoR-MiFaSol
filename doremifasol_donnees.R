@@ -1,7 +1,11 @@
-# telechargement de la table RP logement de 207
+#https://github.com/InseeFrLab/DoReMIFaSol/blob/master/README.md
+
+
+# telechargement de la table RP logement 2017 : https://www.insee.fr/fr/statistiques/4802056#consulter
 donnees_rp_lgt <- doremifasol::telechargerDonnees("RP_LOGEMENT", date = 2017, vars = c("COMMUNE", "IPONDL", "CATL","REGION"))
 
-donnees_filosofi <- doremifasol::telechargerDonnees("FILOSOFI_DISP_COM_ENS", date = 2017)
+# telechargement de la table Filosofi de 2017 : https://www.insee.fr/fr/statistiques/4291712
+donnees_filo<- doremifasol::telechargerDonnees("FILOSOFI_DISP_COM_ENS", date = 2017)
 
 
 # Labelisation
